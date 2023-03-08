@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Final Project</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class="bx bxs-calculator"></i>
+        <span class="text">Probability</span>
+      </a>
+      <ul class="side-menu top">
+        <li>
+          <a href="/adminhub-master/index.html">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Introduction</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adminhub-master/State.html">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">Statistical Analysis</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adminhub-master/player.html">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Players Analysis</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="/adminhub-master/predict.html">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Prediction</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/adminhub-master/team.html">
+            <i class="bx bxs-group"></i>
+            <span class="text">Team</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>PREDICTE THE FIFA WORLD CUP 2022</h1>
+          </div>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head"></div>
+            <table>
+              <button
+                class="button-19"
+                role="button"
+                style="height: 80px"
+                onclick="displayQuater()"
+              >
+                Predict Quater Finals
+              </button>
+              <div id="quater" style="display: none">
+                <img src="/adminhub-master/img/guss_quater.png" alt="" />
+                <h4>Predicting the QuaterFinals.....</h4>
+              </div>
+              <div id="quaterresult" style="display: none">
+                <h4>
+                  RESULT
+                  <button
+                    class="button-19"
+                    role="button"
+                    onclick="closeAll()"
+                    style="width: 10%"
+                  >
+                    Done
+                  </button>
+                </h4>
+                <img src="/adminhub-master/img/quater_result.png" alt="" />
+              </div>
+              <br /><br />
+
+              <!-- semi -->
+              <button
+                class="button-19"
+                role="button"
+                style="height: 80px"
+                onclick="displaySemi()"
+              >
+                Predict Semi Finals
+              </button>
+              <div id="semi" style="display: none">
+                <img src="/adminhub-master/img/guss_semi.png" alt="" />
+                <h4>Predicting the SemiFinals.....</h4>
+              </div>
+              <div id="semiresult" style="display: none">
+                <h4>
+                  RESULT
+                  <button
+                    class="button-19"
+                    role="button"
+                    onclick="closeAll()"
+                    style="width: 10%"
+                  >
+                    Done
+                  </button>
+                </h4>
+                <img src="/adminhub-master/img/semi_result.png" alt="" />
+              </div>
+              <br /><br />
+
+              <!-- finals -->
+              <button
+                class="button-19"
+                role="button"
+                style="height: 80px"
+                onclick="displayFinal()"
+              >
+                Predict Final
+              </button>
+              <div id="final" style="display: none">
+                <img src="/adminhub-master/img/guss_final.png" alt="" />
+                <h4>Predicting the World Cup Final.....</h4>
+              </div>
+              <div id="finalresult" style="display: none">
+                <h4>
+                  RESULT
+                  <button
+                    class="button-19"
+                    role="button"
+                    onclick="closeAll()"
+                    style="width: 10%"
+                  >
+                    Done
+                  </button>
+                </h4>
+                <img src="/adminhub-master/img/final_result.png" alt="" />
+              </div>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

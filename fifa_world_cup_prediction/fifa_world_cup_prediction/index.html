@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Final Project</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class="bx bxs-calculator"></i>
+        <span class="text">Probability</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Introduction</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adminhub-master/State.html">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">Statistical Analysis</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adminhub-master/player.html">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Players Analysis</span>
+          </a>
+        </li>
+        <li>
+          <a href="/adminhub-master/predict.html">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Prediction</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/adminhub-master/team.html">
+            <i class="bx bxs-group"></i>
+            <span class="text">Team</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+
+        <div class="table-data">
+          <br class="order">
+            <div class="head">
+              <h3 ><b>FIFA WORLD CUP PREDICTION MODEL</b></h3>
+              </div>
+              Many people call football “the unpredictable game” because a
+              football match has different factors that can change the final
+              score.That’s true … to some extent. It’s hard to predict the
+              final score or the winner of a match, but that’s not the case when
+              it comes to predicting the winner of a competition.</br>  So, now we are
+              making a model to predict the World Cup 2022.
+              <br />
+              <br />
+              <h4>How are we going to predict the matches?</h4>
+              <br />
+              <p>
+                There are different ways to make predictions. We have decided to give a chance to the
+                Poisson distribution. Why? Well, let’s have a look at the
+                definition of the Poisson distribution.
+              </p>
+              <p
+                id="f63e"
+                class="mt mu is be mv mw mx my mz na nb ls dl"
+                data-selectable-paragraph=""
+              >
+                The Poisson distribution is a discrete probability distribution
+                that describes the number of events occurring in a fixed time
+                interval or region of opportunity.
+              </p>
+              <br />
+              <p>
+                If we think of a goal as an event that might happen in the 90 minutes of a football match, we could calculate the probability of the number of goals that could be scored in a match by Team A and Team B.
+But that’s not enough. 
+We still need to meet the assumptions of the Poisson distribution.
+              </p>
+              
+             
+              <ol class="">
+                <li
+                  id="c3f5"
+                  class="nh ni is kz b la lb ld le lg nj lk nk lo nl ls nm nn no np bj"
+                  data-selectable-paragraph=""
+                >
+                  The number of events can be counted (a match can have 1, 2, 3
+                  or more goals)
+                </li>
+                <br>
+                <li
+                  id="4cc4"
+                  class="nh ni is kz b la nq ld nr lg ns lk nt lo nu ls nm nn no np bj"
+                  data-selectable-paragraph=""
+                >
+                  The occurrence of events is independent (the occurrence of one
+                  goal should not affect the probability of another goal)
+                </li>
+                <br>
+                <li
+                  id="69e7"
+                  class="nh ni is kz b la nq ld nr lg ns lk nt lo nu ls nm nn no np bj"
+                  data-selectable-paragraph=""
+                >
+                  The rate at which events occur is constant (the probability of
+                  a goal occurring in a certain time interval should be exactly
+                  the same for every other time interval of the same length)
+                </li>
+                <br>
+                <li
+                  id="ff57"
+                  class="nh ni is kz b la nq ld nr lg ns lk nt lo nu ls nm nn no np bj"
+                  data-selectable-paragraph=""
+                >
+                  Two events cannot occur at exactly the same instant in time
+                  (two goals can’t occur at the same time)
+                </li>
+              </ol>
+              <br />
+              
+             
+              <p>
+                Now we can say that it’s possible to use the Poisson
+                distribution to calculate the probability of the number of goals
+                that could be scored in a match. Here’s the formula of the
+                Poisson distribution.
+                <br><br>
+                <img
+                  alt=""
+                  class="bg kr ks c"
+                  width="396"
+                  height="159"
+                  loading="lazy"
+                  role="presentation"
+                  src="https://miro.medium.com/max/792/0*mS13hITSE58ZoWrx.png"
+                />
+                <br /><br>
+
+                To make the predictions We considered:<br><br> lambda: median of goals
+                in 90 minutes (Team A and Team B) <br><br>x: number of goals in a match
+                that could be scored by Team A and Team B To calculate lambda,
+                we need the average goals scored/conceded by each national team.
+              </p>
+
+              <br />
+              <br />
+              <h1>Our Main Winner Prediction Function</h1>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                disabled
+                style="
+                  width: 80%;
+                  height: 600px;
+                  overflow-x: auto;
+                  resize: none;
+                "
+              >
+             
+                  #Points Prediction
+predict_Winner<-function(home,away)
+{
+  #getting indices of countries
+  # 'which' returns index from dataframe
+  HomeRowIndex=which(df_team_strength$Team==home)
+  AwayRowIndex=which(df_team_strength$Team==away)
+  
+  #getting their scored goals average in home and away
+  scored=as.double(df_team_strength[HomeRowIndex,2])
+  lamb_home = as.double(scored)
+  
+  scored=as.double(df_team_strength[AwayRowIndex,2])
+  lamb_away = as.double(scored)
+  
+  prob_draw = prob_home = prob_away = 0
+  
+  for(x in 0:11){
+    for(y in 0:11){
+      p = dpois(x, lamb_home) * dpois(y, lamb_away)
+      
+      if (x == y){
+        prob_draw = p + prob_draw
+      }
+      else if (x > y){
+        prob_home = p+prob_home
+      }
+      else{
+        prob_away = p+prob_away
+      }
+    }
+  }
+  
+  points_home = 3 * prob_home + prob_draw
+  points_away = 3 * prob_away + prob_draw
+  
+  #winner of match based on points
+  if(points_home>points_away)
+    return(home)
+  else
+    return(away)
+}
+
+               
+            </textarea
+              >
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
